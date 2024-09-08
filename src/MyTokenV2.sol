@@ -8,13 +8,7 @@ import "openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.s
 import "openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol";
 
 /// @custom:oz-upgrades-from MyToken
-contract MyTokenV2 is
-    Initializable,
-    ERC20Upgradeable,
-    OwnableUpgradeable,
-    ERC20PermitUpgradeable,
-    UUPSUpgradeable
-{
+contract MyTokenV2 is Initializable, ERC20Upgradeable, OwnableUpgradeable, ERC20PermitUpgradeable, UUPSUpgradeable {
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
         _disableInitializers();
@@ -33,7 +27,5 @@ contract MyTokenV2 is
         _mint(to, amount);
     }
 
-    function _authorizeUpgrade(
-        address newImplementation
-    ) internal override onlyOwner {}
+    function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
 }

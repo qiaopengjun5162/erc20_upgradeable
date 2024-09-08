@@ -21,10 +21,7 @@ contract MyTokenTest is Test {
         // Define the owner address
         owner = vm.addr(1);
         // Deploy the proxy and initialize the contract through the proxy
-        proxy = new ERC1967Proxy(
-            address(implementation),
-            abi.encodeCall(implementation.initialize, owner)
-        );
+        proxy = new ERC1967Proxy(address(implementation), abi.encodeCall(implementation.initialize, owner));
         // 用代理关联 MyToken 接口
         myToken = MyToken(address(proxy));
         // Define a new owner address for upgrade tests
@@ -45,11 +42,6 @@ contract MyTokenTest is Test {
     // 测试升级
     function testUpgradeability() public {
         // Upgrade the proxy to a new version; MyTokenV2
-        Upgrades.upgradeProxy(
-            address(proxy),
-            "MyTokenV2.sol:MyTokenV2",
-            "",
-            owner
-        );
+        Upgrades.upgradeProxy(address(proxy), "MyTokenV2.sol:MyTokenV2", "", owner);
     }
 }

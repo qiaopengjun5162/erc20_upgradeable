@@ -95,7 +95,7 @@ erc20_upgradeable on  master [!+?] via 🅒 base took 1m 9.4s
 ➜ 
 ```
 
-https://sepolia.etherscan.io/address/0xa8672dfdb0d5a672cc599c3e8d77f8e807cec6d6#code
+<https://sepolia.etherscan.io/address/0xa8672dfdb0d5a672cc599c3e8d77f8e807cec6d6#code>
 
 ![image-20240727142744901](assets/image-20240727142744901.png)
 
@@ -200,6 +200,7 @@ Sensitive values saved to: /Users/qiaopengjun/Code/solidity-code/erc20_upgradeab
 erc20_upgradeable on  master [!+?] via 🅒 base took 1m 1.6s 
 ➜
 ```
+
 <https://sepolia.etherscan.io/address/0x2b25e3f0879c4f9d7dedfe5414d6e48045b2fa57#code>
 
 ![image-20240727142831574](assets/image-20240727142831574.png)
@@ -230,9 +231,7 @@ This contract may be a proxy contract. Click on **More Options** and select **Is
 
 ![image-20240727143551293](assets/image-20240727143551293.png)
 
-
-
 ## 参考
 
-- https://github.com/OpenZeppelin/openzeppelin-foundry-upgrades
-- 
+- <https://github.com/OpenZeppelin/openzeppelin-foundry-upgrades>
+- <https://docs.openzeppelin.com/upgrades-plugins/1.x/api-foundry-upgrades>
